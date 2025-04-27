@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    min-height: 100vh;
+    width: 100%;
+    background-color: aqua;
+    padding: 3rem;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#main .card {
+    height: auto;
+    width: 25rem;
+    max-width: 90%;
+    background: linear-gradient(9deg, red, green, yellow);
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main .card nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+img {
+    height: 8rem;
+    width: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card > h1 {
+    font-size: 2rem;
+    color: yellow;
+    margin-bottom: 0.5rem;
+}
+
+.card > h2 {
+    font-size: 1.2rem;
+    color: blue;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    height: 4rem;
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background: linear-gradient(9deg, red, green, yellow);
+    border: none;
+    border-radius: 0.5rem;
+    color: #000;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1024px) {
+    #main {
+        padding: 2rem;
+        gap: 2rem;
+    }
+    #main .card {
+        width: 22rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #main {
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+    #main .card {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #main {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+    #main .card {
+        width: 90%;
+    }
+    .card > h1 {
+        font-size: 1.8rem;
+    }
+    .card > h2 {
+        font-size: 1rem;
+    }
+    p {
+        font-size: 13px;
+    }
+    button {
+        font-size: 1.2rem;
+        height: 3.5rem;
+    }
+}
